@@ -69,7 +69,7 @@ RUN echo "deb http://deb.nodesource.com/node_8.x stretch main" > /etc/apt/source
 ENV ODOO_VERSION 14.0
 ARG ODOO_RELEASE=20200417
 ARG ODOO_SHA=ca4a7485b0b75850ffe1458a8f3266839400a501
-RUN curl -o odoo.deb -sSL https://download.odoocdn.com/download/14e/deb?payload=MTYwNDc5NjAzMi4xNGUuZGViLkVhSmRxYWZSVmJnUnlhX0FKdkJzMkFoOURIWGF4ak4xOEJvcTI0S1dIZTA9 \
+RUN curl -o odoo.deb -sSL http://192.168.1.37/odoo_14.deb \
         && apt-get update \
         && apt-get -y install --no-install-recommends ./odoo.deb \
         && rm -rf /var/lib/apt/lists/* odoo.deb
