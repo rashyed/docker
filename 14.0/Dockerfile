@@ -57,7 +57,7 @@ RUN npm install -g rtlcss
 ENV ODOO_VERSION 14.0
 ARG ODOO_RELEASE=20201026
 ARG ODOO_SHA=f03d267d3a055dbc798b799efbfcb1eb9a739b23
-RUN curl -o odoo.deb -sSL http://192.168.1.37/odoo_14.deb \
+RUN curl -o odoo.deb -sSL http://dwich.ma/odoo_14_14-11-2020.deb \
     && apt-get update \
     && apt-get -y install --no-install-recommends ./odoo.deb \
     && rm -rf /var/lib/apt/lists/* odoo.deb
